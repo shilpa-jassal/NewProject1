@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import LogIn from './LogIn';
 import 'bootstrap/dist/css/bootstrap.css';
 //import App from './App';
-import SignUp from './SignUp';
+//import SignUp from './SignUp';
 // import Newlead from './Newlead';
 //import LeadDashboard from './LeadDashboard';
 //import Department from './Department';
@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker';
 //import Attachment from './Attachment';
 // import Test1 from './Test1';
 import 'bootstrap/dist/css/bootstrap.min.css';  
-ReactDOM.render(<SignUp/>, document.getElementById('root'));
+ReactDOM.render(<LogIn/>, document.getElementById('root'));
 // ReactDOM.render(<Test1/>, document.getElementById('root'));
 // ReactDOM.render(<Newlead/>, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
