@@ -21,17 +21,15 @@ class SignUp extends React.Component{
         this.setState({ [e.target.name]: e.target.value })
     }
     submitHandler = e => {
-        axios.post("localhost:8000", this.state  
+        console.log(this.state)
+        axios.post("http://localhost:8000/api/user/", this.state  
                )
                 .then(response => {
                     console.log(response)
                 })
                 .catch(error => {
                     console.log(error)
-                })
-            
-        
-    }
+                })}
 
    
     render(){
@@ -58,7 +56,7 @@ class SignUp extends React.Component{
             <input type="password" class="form-control" placeholder="Password" name="password"  value={this.state.password} onChange={this.changeHandler}/>
             </div>
             <div class="form-group">
-            <input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password"  value={this.state.confirm_password} onChange={this.changeHandler}/>
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"  value={this.state.confirm_password} onChange={this.changeHandler}/>
             </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Signup</button>
