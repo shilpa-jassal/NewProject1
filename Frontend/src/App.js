@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Switch,Route,Router} from  "react-router-dom";
+import {Switch,Route,BrowserRouter as Router } from  "react-router-dom";
 import LogIn from './LogIn';
 import SignUp from './SignUp';
 import LeadDashboard from './LeadDashboard';

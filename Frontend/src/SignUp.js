@@ -21,22 +21,23 @@ class SignUp extends React.Component{
         this.setState({ [e.target.name]: e.target.value })
     }
     submitHandler = e => {
+        e.preventDefault();
         console.log(this.state)
-        axios.post("http://localhost:8000/api/user/", this.state  
+        axios.post("http://localhost:8000/user/list/", this.state  
                )
-                .then(response => {
+            .then(response => {
                     console.log(response)
-                })
-                .catch(error => {
-                    console.log(error)
-                })}
+            })
+            .catch(error => {
+            console.log(error)
+            })}
 
    
     render(){
         return(
             <div class="body">
             <div class="login-form">
-            <form  method="POST"  onSubmit={this.submitHandler}>
+            <form  method="POST" >
       
             <h2 class="text-center">Signup</h2>       
             <div class="form-group">
@@ -59,7 +60,7 @@ class SignUp extends React.Component{
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"  value={this.state.confirm_password} onChange={this.changeHandler}/>
             </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Signup</button>
+            <button type="button"  class="btn btn-primary btn-block" onClick={this.submitHandler}>Signup</button>
         </div>
                
             </form>
